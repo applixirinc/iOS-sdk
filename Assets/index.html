@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Applixir Ad Demo</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: #f0ecd0;
+      font-family: -apple-system, sans-serif;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #start {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #applixir-app {
+      width: 100%;
+    }
+  </style>
+
+  <script>
+    window.__gpp = function () {
+      return {};
+    };
+
+    window.swiftInjectedKey = null;
+
+    function startAd() {
+      if (!window.swiftInjectedKey) {
+        console.error("API key not injected.");
+        return;
+      }
+
+      const options = {
+        injectionElementId: "applixir-app",
+        apiKey: window.swiftInjectedKey,
+        adStatusCallbackFn: (status) => {
+          console.log("Ad event:", status);
+          if (status === "allAdsCompleted") {
+            window.adCompleted?.();
+          }
+        },
+        adErrorCallbackFn: (error) => {
+          console.log("Error:", error.getError().data);
+        },
+      };
+
+      initializeAndOpenPlayer(options);
+    }
+
+    window.adCompleted = function () {
+      console.log("adCompleted called");
+      window.webkit?.messageHandlers?.consoleLogger?.postMessage("Ad event: allAdsCompleted");
+    };
+
+    // Optional patch if needed
+    const observer = new MutationObserver(() => {
+      if (typeof patchApplixirPopup === 'function') {
+        patchApplixirPopup();
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  </script>
+
+  <script src="https://cdn.applixir.com/applixir.app-staging.v6.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div id="applixir-app"></div>
+    <button id="start">START</button>
+  </div>
+
+  <script>
+    document.getElementById("start").addEventListener("click", () => {
+      startAd();
+    });
+  </script>
+</body>
+</html>

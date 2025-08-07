@@ -1,0 +1,22 @@
+{
+  "name": "AppLixirAds",
+  "version": "0.1.0",
+  "summary": "A short description of AppLixirAds.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/AppLixir/AppLixirAds",
+  "license": {
+    "type": "Apache-2.0",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "AppLixir": "info@applixir.com"
+  },
+  "source": {
+    "git": "https://github.com/AppLixir/AppLixirAds.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "AppLixirAds/Classes/**/*"
+}

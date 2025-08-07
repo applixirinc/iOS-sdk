@@ -1,0 +1,6 @@
+framework module AppLixirAds {
+  umbrella header "AppLixirAds-umbrella.h"
+
+  export *
+  module * { export * }
+}

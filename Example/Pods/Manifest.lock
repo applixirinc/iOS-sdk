@@ -1,0 +1,16 @@
+PODS:
+  - AppLixirAds (0.1.0)
+
+DEPENDENCIES:
+  - AppLixirAds (from `../`)
+
+EXTERNAL SOURCES:
+  AppLixirAds:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AppLixirAds: 3ffdc8c4ec74bc18d911fa9c2b6cc4d0a97ddb78
+
+PODFILE CHECKSUM: 09a14a200132d95ee2cd4f69e7d873d33ddb4b8a
+
+COCOAPODS: 1.16.2
