@@ -16,8 +16,8 @@ public class AppLixirAdPlayer: NSObject {
     }
 
     public func playAd(from viewController: UIViewController, onComplete: (() -> Void)? = nil) {
-        guard let apiKey = self.apiKey else {
-            print("❌ AppLixirAdPlayer: API Key not set. Call setApiKey() first.")
+        guard self.apiKey != nil else {
+            print("AppLixirAdPlayer: API Key not set. Call setApiKey() first.")
             return
         }
 

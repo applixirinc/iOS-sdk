@@ -26,7 +26,7 @@ Wrapper for playing an ad with WebView for iOS. It provides a simple interface t
   s.author           = { 'AppLixir' => 'info@applixir.com' }
   s.source           = { :git => 'https://github.com/applixirinc/iOS-sdk.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '12.0'
 
   #s.resources = 'AppLixirAds/Assets/**/*'
   
