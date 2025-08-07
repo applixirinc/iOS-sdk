@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'AppLixirAds iOS SDK'
+  s.name             = 'AppLixirAds'
   s.version          = '0.1.0'
   s.summary          = 'Wrapper for playing an ad with WebView for iOS.'
 
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Wrapper for playing an ad with WebView for iOS.
+Wrapper for playing an ad with WebView for iOS. It provides a simple interface to integrate ads into your iOS applications, allowing developers to easily display advertisements using a web view.
                        DESC
 
   s.homepage         = 'https://github.com/applixirinc/iOS-sdk'
@@ -32,12 +32,10 @@ Wrapper for playing an ad with WebView for iOS.
   
   s.source_files = 'Classes/**/*.{swift}'
 
-  
+  s.swift_versions = '5.0'
 
-  
-  
   s.resource_bundles = {
-    'AppLixirAds' => ['AppLixirAds/Assets/**/*']
+    'AppLixirAds' => ['Assets/**/*']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
