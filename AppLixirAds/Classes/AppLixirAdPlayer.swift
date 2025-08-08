@@ -65,13 +65,17 @@ public class AppLixirAdPlayer: NSObject {
 
         self.webView = webView
         self.containerView = container
+        
+        let frameworkBundle = Bundle(for: YourFrameworkClass.self)
 
-        // Load local index.html
-        if let url = Bundle(for: type(of: self)).url(forResource: "index", withExtension: "html") {
-            webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
+        if let resourceBundleURL = frameworkBundle.url(forResource: "AppLixirAds", withExtension: "bundle"),
+           let resourceBundle = Bundle(url: resourceBundleURL),
+           let htmlURL = resourceBundle.url(forResource: "index", withExtension: "html") {
+            webView.loadFileURL(htmlURL, allowingReadAccessTo: htmlURL.deletingLastPathComponent())
         } else {
-            print("❌ AppLixirAdPlayer: index.html not found in bundle.")
+            print("Failed to load index.html from AppLixirAds.bundle")
         }
+        
     }
 
     public func dismissAd() {
