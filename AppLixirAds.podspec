@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AppLixirAds'
-  s.version          = '0.5.0'
+  s.version          = '0.6.0'
   s.summary          = 'Wrapper for playing an ad with WebView for iOS.'
 
   s.description      = <<-DESC

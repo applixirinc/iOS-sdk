@@ -66,7 +66,7 @@ public class AppLixirAdPlayer: NSObject {
         self.webView = webView
         self.containerView = container
         
-        let frameworkBundle = Bundle(for: YourFrameworkClass.self)
+        let frameworkBundle = Bundle(for: AppLixirAdPlayer.self)
 
         if let resourceBundleURL = frameworkBundle.url(forResource: "AppLixirAds", withExtension: "bundle"),
            let resourceBundle = Bundle(url: resourceBundleURL),
