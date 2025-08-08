@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AppLixirAds'
-  s.version          = '0.0.3'
+  s.version          = '0.3.0'
   s.summary          = 'Wrapper for playing an ad with WebView for iOS.'
 
 # This description is used to generate tags and improve search results.
