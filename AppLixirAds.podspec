@@ -1,44 +1,34 @@
-#
-# Be sure to run `pod lib lint AppLixirAds.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'AppLixirAds'
-  s.version          = '0.0.1'
+  s.version          = '0.2.0'
   s.summary          = 'Wrapper for playing an ad with WebView for iOS.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
   s.description      = <<-DESC
-Wrapper for playing an ad with WebView for iOS. It provides a simple interface to integrate ads into your iOS applications, allowing developers to easily display advertisements using a web view.
-                       DESC
+    AppLixirAds is a lightweight iOS library that provides a simple wrapper to display ads using a WebView.
+    It is designed for easy integration and customization to show ads inside your iOS app.
+  DESC
 
   s.homepage         = 'https://github.com/applixirinc/iOS-sdk'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { type: 'Apache 2.0', file: 'LICENSE' }
   s.author           = { 'AppLixir' => 'info@applixir.com' }
-  s.source           = { :git => 'https://github.com/applixirinc/iOS-sdk.git', :tag => s.version.to_s }
+  s.source           = { git: 'https://github.com/applixirinc/iOS-sdk.git', tag: s.version.to_s }
 
   s.ios.deployment_target = '12.0'
 
-  #s.resources = 'AppLixirAds/Assets/**/*'
-  
-  s.source_files = 'Classes/**/*.{swift}'
+  s.swift_versions = ['5.0']
 
-  s.swift_versions = '5.0'
 
+  # Source files: your swift files are inside AppLixirAds/Classes
+  s.source_files = 'AppLixirAds/Classes/**/*.{swift}'
+
+  # Resource bundle for assets inside AppLixirAds/Assets
   s.resource_bundles = {
-    'AppLixirAds' => ['Assets/**/*']
+    'AppLixirAds' => ['AppLixirAds/Assets/**/*']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # Frameworks you depend on (e.g., UIKit for iOS UI components)
+  s.frameworks = 'UIKit'
+
+  # Uncomment and add any dependencies if you have
+  # s.dependency 'SomeLibrary', '~> 1.0'
 end
