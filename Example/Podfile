@@ -1,13 +1,6 @@
 use_frameworks!
-
-platform :ios, '10.0'
-
-target 'AppLixirAds_Example' do
+target 'AppLixirAds_Tests' do
   pod 'AppLixirAds', :path => '../'
-
-  target 'AppLixirAds_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  
+  
 end

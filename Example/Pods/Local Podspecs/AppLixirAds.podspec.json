@@ -1,19 +1,19 @@
 {
   "name": "AppLixirAds",
-  "version": "0.1.0",
-  "summary": "A short description of AppLixirAds.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/AppLixir/AppLixirAds",
+  "version": "0.2.0",
+  "summary": "Wrapper for playing an ad with WebView for iOS",
+  "description": "AppLixirAds is a lightweight iOS library that provides a simple wrapper to display ads using a WebView. It is designed for easy integration and customization to show ads inside your iOS app.",
+  "homepage": "https://github.com/applixirinc/iOS-sdks",
   "license": {
-    "type": "Apache-2.0",
+    "type": "Apache 2.0",
     "file": "LICENSE"
   },
   "authors": {
     "AppLixir": "info@applixir.com"
   },
   "source": {
-    "git": "https://github.com/AppLixir/AppLixirAds.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/applixirinc/iOS-sdks.git",
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "10.0"
